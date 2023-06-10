@@ -200,14 +200,6 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
 
 
-    - name: 查看
-      run: |
-        cd $GITHUB_WORKSPACE
-        git init
-        git remote add origin https://github.com/$GITHUB_REPOSITORY
-        git fetch
-        git checkout -t origin/$CURRENT_BRANCH
-
     - name: 准备工具链图像
       run: |
         mkdir -p workspace
